@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat:wght@500&display=swap');
+
+body{
+  margin:0;
+  background-image:url(images/orion.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  font-family: 'Gowun Batang', serif ;
+  font-weight: 700;
+  padding-top: 3vh;
+  margin-top: 10vh;
+  margin-bottom: 100vh;
+  min-height: 100vh;
+  background-color: aliceblue;
+}
+.task-tabs{
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+}
+
+.task-tabs div{
+  padding: 1rem;
+}
+
+.task-area{
+  border: 1px solid lightgray;
+  margin-top: 1vh;
+}
+
+#underLine{
+  height: 4px;
+  background-color: rgb(52, 81, 81);
+  position: absolute;
+  width : 64px;
+  left : 0px;
+  top : 56px;
+  transition: 0.2s;
+  padding : 0px;
+}
+
+.task-done span{
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.task:first-child{
+  margin-top: 1vh;
+}
+
+.buttons img{
+  max-width: 27px;
+  max-height: 27px;
+}
+
+.buttons button{
+  background-color: unset;
+  border: none;
+}
+
+.task-tabs{
+  cursor: pointer;
+}
+
+#task-input{
+border: 0px;
+display: flex;
+max-height: 90%;
+background-color: inherit;
+margin-left: 1em;
+}
+
+#task-input:focus{
+  outline: none;
+}
+
+#add-button{
+  border: 0;
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+
+#add-button:hover{
+transform: rotate(180deg);
+transition: 0.3s;
+}
+
+.input-area{
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  height: 40px;
+  max-width: fit-content;
+  border-radius: 30px;
+}
+
+.plus {
+  --b: 2px; /* the thickness */
+  width: 15px; /* the size */
+  aspect-ratio: 1;
+  border: 10px solid #fff; /* the outer space */
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#fff 90deg,#000 0) 
+    calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
+    calc(50%  + var(--b))   calc(50%  + var(--b));
+}
+
+.blink {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
